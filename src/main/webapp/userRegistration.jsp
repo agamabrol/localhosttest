@@ -1,19 +1,19 @@
 <%@ page import="java.sql.*"%>
-<%@ String userName = request.getParameter("userName");   
-    String password = request.getParameter("password");
-    String firstName = request.getParameter("firstName");
-    String lastName = request.getParameter("lastName");
-    String email = request.getParameter("email");
-    Class.forName("com.mysql.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jwt",
-            "root", "mukesh");
-    Statement st = con.createStatement();
-    int i = st.executeUpdate("insert into USERS(first_name, last_name, email, username, password, regdate) values ('" + firstName + "','"
-    + lastName + "','" + email + "','" + userName + "','" + password + "', CURDATE())");
-    if (i > 0) {
-        response.sendRedirect("welcome.jsp");
-        
-    } else {
-        response.sendRedirect("index.jsp");
-    }
+<%Â String userName = request.getParameter("userName");Â Â Â 
+Â Â Â Â String password = request.getParameter("password");
+Â Â Â Â String firstName = request.getParameter("firstName");
+Â Â Â Â String lastName = request.getParameter("lastName");
+Â Â Â Â String email = request.getParameter("email");
+Â Â Â Â Class.forName("com.mysql.jdbc.Driver");
+Â Â Â Â Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jwt",
+Â Â Â Â Â Â Â Â Â Â Â Â "root", "mukesh");
+Â Â Â Â Statement st = con.createStatement();
+Â Â Â Â int i = st.executeUpdate("insert into USERS(first_name, last_name, email, username, password, regdate) values ('" + firstName + "','"
+Â Â Â Â + lastName + "','" + email + "','" + userName + "','" + password + "', CURDATE())");
+Â Â Â Â if (i > 0) {
+Â Â Â Â Â Â Â Â response.sendRedirect("welcome.jsp");
+Â Â Â Â Â Â Â Â 
+Â Â Â Â } else {
+Â Â Â Â Â Â Â Â response.sendRedirect("index.jsp");
+Â Â Â Â }
 %>
