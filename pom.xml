@@ -28,6 +28,5 @@
 	</dependencies>
 	<build>
 		<finalName>LoginWebApp</finalName>
-	</build>
-	
+	</build>	
 </project>
